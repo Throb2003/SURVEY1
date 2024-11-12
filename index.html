@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <title>Online Booking System</title>
+</head>
+<body>
+    <h1>Throb Beauty Shop</h1>
+    <div class="navigation">
+      <ul>
+          <li class="list active">
+              <a href="#">
+                <span class="icon"><i class="fas fa-home"></i></span>
+                  <span class="text">Home</span>
+              </a>
+          </li>
+
+          <li class="list">
+              <a href="#">
+                  <span class="icon"><i class="fas fa-user"></i></span>
+                  <span class="text">Profile</span>
+              </a>
+          </li>
+
+          <li class="list">
+              <a href="#">
+                  <span class="icon"><i class="fas fa-comment-dots"></i></span>
+                  <span class="text">Message</span>
+              </a>
+          </li>
+
+          <li class="list">
+              <a href="#">
+                  <span class="icon"><i class="fas fa-photo-video"></i></span>
+                  <span class="text">Photo</span>
+              </a>
+          </li>
+          <li class="list">
+              <a href="#">
+                  <span class="icon"><i class="fas fa-cog"></i></span>
+                  <span class="text">Settings</span>
+              </a>
+          </li>
+          <div class="indicator"></div>
+      </ul>
+  </div>
+
+  <main>
+    <form id="bookingForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required aria-label="Name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required aria-label="Email">
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" required aria-label="Phone Number">
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required aria-label="Date">
+
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time" required aria-label="Time">
+
+      <label for="service">Service:</label>
+      <select id="service" name="service" required aria-label="Select Service">
+        <option value="">Select Service</option>
+        <option value="Haircut">Haircut</option>
+        <option value="Massage">Massage</option>
+        <option value="Manicure">Manicure</option>
+        <option value="Pedicure">Pedicure</option>
+      </select>
+
+      <label for="comments">Additional Comments:</label>
+      <textarea id="comments" name="comments" rows="4" cols="50" aria-label="Additional Comments"></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+    <div id="bookingInfo"></div>
+
+    <table id="bookingTable">
+      <caption>Bookings</caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Service</th>
+          <th>Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Booking data will be inserted here dynamically -->
+      </tbody>
+    </table>
+  </main>
+  <footer>
+    <p>&copy; Copyright 2024. Designed and Styled By Throb&TRADE;</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
